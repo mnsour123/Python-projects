@@ -32,7 +32,8 @@ ask("What does RAM stand for?", "Random Access Memory")
 ask("What does GPU stand for?", "Graphics Processing Unit")
 ask("What does URL stand for?", "Uniform Resource Locator")
 ask("What does HTML stand for?", "HyperText Markup Language")
-ask("What does IP stand for?", "Internet Protocol")
+ask("What does IP stand for?", "Internet EProtocol")
+ask("What dose HTTP stand for", "Hyper Text Transfer Protocol")
 
 print("\nYou got " + str(score) +
       " questions right out of " + str(total_questions))
