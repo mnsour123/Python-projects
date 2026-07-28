@@ -14,7 +14,7 @@ This project loads a season's worth of match data, cleans it up, and produces su
 
 Match data is pulled from [football-data.co.uk](https://www.football-data.co.uk/), a free source of historical football match statistics (goals, shots, cards, and more) organized by league and season.
 
-Example dataset used: Premier League 2023/24 season
+Example dataset used is  Premier League 2023/24 season
 `https://www.football-data.co.uk/mmz4281/2324/E0.csv`
 
 To analyze a different league or season, swap the `url` variable for another CSV link from the same site.
