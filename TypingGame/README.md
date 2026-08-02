@@ -1,4 +1,4 @@
-# ⌨ Typing Speed Game
+# Typing Speed Game
 
 A simple desktop typing speed test built with Python's Tkinter — type the given paragraph as fast and accurately as you can, then see your WPM (words per minute) and accuracy score.
 
