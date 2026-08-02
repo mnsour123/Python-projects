@@ -1,55 +1,68 @@
-# Math Quiz
+#  Math Quiz
 
-A simple command-line arithmetic quiz. Answer 10 random problems (addition,
-subtraction, multiplication, and division) and get a summary of your speed
-and accuracy at the end.
+A command-line arithmetic quiz game written in Python. Pick a difficulty, solve randomly generated problems, and get a full breakdown of your speed, accuracy, and streaks at the end.
 
-## Usage
+## Features
+
+- Three difficulty levels (Easy / Medium / Hard) with different operand ranges
+- Choose how many problems you want per round
+- Covers addition, subtraction, multiplication, and division
+- Division problems always divide evenly (no messy decimals)
+- Subtraction never produces negative results
+- Retry until you get each problem right — wrong attempts are tracked
+- End-of-round stats: total time, accuracy, average time per problem, best streak
+- Per-operator breakdown so you can see which operation you're weakest at
+- Quit anytime mid-quiz by typing `q`
+- Play multiple rounds in a row without restarting the script
+
+## Requirements
+
+- Python 3.x
+
+No external libraries needed — only the Python standard library (`random`, `time`, `operator`).
+
+## How to Run
 
 ```bash
 python math_quiz.py
 ```
 
-1. Pick a difficulty level (Easy, Medium, or Hard) — this controls the
-   range of numbers used in each problem.
-2. Press Enter to start.
-3. Answer each problem. If you get it wrong, you'll be asked to try again
-   until you answer correctly.
-4. Type `q` at any prompt to quit early.
+On some systems you may need `python3` instead of `python`.
 
-## Features
+## How to Play
 
-- **Four operators**: `+`, `-`, `*`, `/`
-  - Division problems always divide evenly (no decimals).
-  - Subtraction problems never produce a negative result.
-- **Difficulty levels**: choose the number range for the problems.
-- **Input validation**: non-numeric input is rejected with a friendly
-  message instead of crashing or silently counting as wrong.
-- **Quit anytime**: type `q` during the quiz to exit cleanly.
-- **End-of-quiz summary**:
-  - Total time taken
-  - Total wrong guesses
-  - First-try accuracy (% of problems solved correctly on the first
-    attempt)
-  - Average time per problem
+1. Choose a difficulty (`1`, `2`, or `3`).
+2. Choose how many problems you'd like, or press Enter for the default (10).
+3. Press Enter to start.
+4. Type your answer to each problem and press Enter.
+   - If you're wrong, you'll be asked to try the same problem again.
+   - Type `q` at any point to quit early.
+5. After the last problem, you'll see your results:
+   - Total time taken
+   - Number of wrong guesses
+   - First-try accuracy
+   - Average time per problem
+   - Best streak of consecutive first-try answers
+   - A breakdown of first-try accuracy by operator
+6. Choose whether to play another round.
 
-## Example
+## Difficulty Levels
+
+| Level  | Operand Range |
+|--------|---------------|
+| Easy   | 3–10          |
+| Medium | 3–12          |
+| Hard   | 5–20          |
+
+## Customizing
+
+- Add or adjust difficulty levels by editing the `DIFFICULTIES` dictionary.
+- Add new operators by extending the `OPERATORS` dictionary with another `operator` module function.
+- Change the default problem count via `DEFAULT_PROBLEM_COUNT`.
+
+## File Structure
 
 ```
-Choose a difficulty:
-  1) Easy  (operands 3-10)
-  2) Medium  (operands 3-12)
-  3) Hard  (operands 5-20)
-> 2
-
-Medium mode selected. Press enter to start (or type "q" during the quiz to quit)
----------------------
-Problem #1: 7 * 9 =
+math_quiz.py   # main game script — just run this
+README.md      # this file
 ```
-
-## Possible future improvements
-
-- Allow negative results for subtraction as an optional mode
-- Add a per-question timer
-- Let difficulty also control which operators appear
-- Save high scores to a file
