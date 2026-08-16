@@ -1,5 +1,6 @@
 # Pomodoro Timer
 
+
 A desktop Pomodoro study/focus timer built with Python's Tkinter. Cycle through focus sessions and breaks using the Pomodoro Technique, with a live animated progress ring and session tracking.
 
 ## Features
