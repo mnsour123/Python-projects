@@ -1,0 +1,15 @@
+[project]
+name = "taskman"
+version = "0.1.0"
+description = "A tiny command-line task manager"
+requires-python = ">=3.8"
+
+[project.scripts]
+taskman = "taskman.cli:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
